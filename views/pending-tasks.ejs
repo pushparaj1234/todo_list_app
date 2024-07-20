@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <style>
+            *
+{
+    box-sizing: border-box;
+    padding: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+      body{
+    background-color:bisque;
+}
+.container{
+    background-color: rgba(0, 0, 0, 0.829);
+    max-width: 1000px;
+    color: aliceblue;
+    align-items: center;
+    margin: 1em auto;
+    border-radius: 0.5em;
+    padding: 2em 1.5em;
+}
+
+input{
+    margin-top: 20px;
+    width: 100%;
+    border-radius: 0.5 rem;
+    padding: 15px;
+    font-size: large;
+    margin-bottom: .75em;
+    color: rgb(255, 122, 5);
+    font-weight: bold;
+}
+input[type=text]{
+    margin-top: 20px;
+    width: 80%;
+    border-radius: 0.5 rem;
+    padding: 15px;
+    margin-bottom: .75em;
+    color: rgb(255, 122, 5);
+    font-weight: bold;
+}
+input[type=radio]
+{
+    margin: 0;
+    width: 20px;
+    height: 15px;
+    margin-bottom: 1em;
+    accent-color:rgb(246, 114, 12);
+}
+input[type=checkbox]
+{
+    margin: 5px;
+    width: 30px;
+    height: 30px;
+  
+    margin-bottom: 1em;
+    accent-color:rgb(246, 114, 12);
+}
+.inputsection
+{
+    margin: 0.75em 0em;
+}
+#invalid
+{
+    color: red;
+}
+input:focus{
+    border: 0.3em solid rgb(86, 241, 13);
+}
+.radios{
+    margin-top:1em;
+    display: block;
+    margin-bottom: 1em;
+}
+h1{
+ text-align: center;
+ font-weight: bold;
+    
+}
+.hrr{
+border-top: 1px dashed red;
+}
+.strikethrough {
+  text-decoration: line-through;
+}
+button
+{
+    margin-left: 1em;
+    width: 15%;
+    border-radius: 3px;
+    padding: 10px;
+   
+    font-weight: 200px;
+    background-color: peru;
+    font-weight: bolder;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+  }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Task Management</h1><br>
+   <h1>Pending Tasks</h1>
+    <% if(data) { %>
+      <% data.forEach((todovalue, index) => { %>
+        <div class="container">
+          <input type="email" name="fetch" readonly value="<%= todovalue.todo %>">
+          
+        </div>
+      <% }) %>
+    <% } %>
+   
+    </div>
+  </body>
+</html>
